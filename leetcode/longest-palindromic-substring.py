@@ -1,3 +1,5 @@
+# http://leetcode.com/2011/11/longest-palindromic-substring-part-ii.html
+# Manacher's Algorithm
 class Solution:
 	# @return a string
 	def longestPalindrome(self, s):
