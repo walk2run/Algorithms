@@ -1,7 +1,7 @@
 class Solution:
-    # @return an integer
-    def maxArea(self, height):
-        i = 0
+	# @return an integer
+	def maxArea(self, height):
+		i = 0
 		j = len(height) - 1
 		maxArea = 0
 		while i <= j:
