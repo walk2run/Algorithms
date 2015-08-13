@@ -1,0 +1,2 @@
+# Readme
+Leetcode and sgu
