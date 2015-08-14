@@ -20,8 +20,6 @@ class Solution {
 			for (p1 = Math.min(p0 + step, n - 1); p1 > p0; p1--) {
 				if (p1 == n - 1)
 					return steps[p0] + 1;
-				if (p1 > n - 1)
-					break;
 				if (steps[p1] == 0) {
 					que.add(p1);
 					steps[p1] = steps[p0] + 1;
