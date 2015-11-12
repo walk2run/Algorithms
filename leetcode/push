@@ -1,0 +1,5 @@
+git add */src/*.java
+git add note
+git add push
+git commit -m qwordy
+git push
