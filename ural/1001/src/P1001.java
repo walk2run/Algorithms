@@ -1,6 +1,7 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.ListIterator;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 /**
  * Created by yfy on 11/12/15.
@@ -32,12 +33,24 @@ import java.util.StringTokenizer;
  */
 
 public class P1001 {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
+/*		Scanner scan = new Scanner(System.in);
+		ArrayList<Long> list = new ArrayList<>();
+		while (scan.hasNext())
+			list.add(scan.nextLong());*/
+
 		StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-		System.out;
-		
-		PrintWriter a;
-		BufferedWriter b;
-		Scanner s;
+		ArrayList<Long> list = new ArrayList<>();
+		while (st.nextToken() != StreamTokenizer.TT_EOF) {
+			if (st.ttype == StreamTokenizer.TT_NUMBER)
+				list.add((long) st.nval);
+		}
+
+		PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+
+		ListIterator<Long> it = list.listIterator(list.size());
+		while (it.hasPrevious())
+			pw.println(Math.sqrt(it.previous()));
+		pw.flush();
 	}
 }
