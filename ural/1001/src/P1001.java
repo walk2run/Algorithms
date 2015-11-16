@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.ListIterator;
-import java.util.Scanner;
 
 /**
  * Created by yfy on 11/12/15.
