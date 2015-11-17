@@ -6,8 +6,7 @@ const char map[26] = {'2', '2', '2', '3', '3', '3', '4', '4', '1', '1', '5',
 
 void solve() {
 	int n, i, j, len, lenw, count;
-	int f[100];
-	char *prev[100], *list[100];
+	int f[100], prev[100], list[100];
 	char number[101], owords[50000][51], words[50000][51], *p;
 	
 	gets(number);
@@ -29,10 +28,10 @@ void solve() {
 			if (lenw <= i + 1 && !strncmp(words[j], number + i - lenw + 1, lenw)) {
 				if (i - lenw < 0) {
 					f[i] = 1;
-					prev[i] = owords[j];
+					prev[i] = j;
 				} else if (f[i - lenw] + 1 < f[i] || f[i] == -1) {
 					f[i] = f[i - lenw] + 1;
-					prev[i] = owords[j];
+					prev[i] = j;
 				}
 			}
 		}
@@ -47,11 +46,11 @@ void solve() {
 		count = 0;
 		while (i >= 0) {
 			list[count++] = prev[i];
-			i -= strlen(prev[i]);
+			i -= strlen(words[prev[i]]);
 		}
 		for (i = count - 1; i > 0; i--)
-			printf("%s ", list[i]);
-		printf("%s\n", list[0]);
+			printf("%s ", owords[list[i]]);
+		printf("%s\n", owords[list[0]]);
 	}
 }
 
