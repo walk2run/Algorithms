@@ -32,7 +32,7 @@ import java.util.ListIterator;
  */
 
 public class P1001 {
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception {
 /*		Scanner scan = new Scanner(System.in);
 		ArrayList<Long> list = new ArrayList<>();
 		while (scan.hasNext())
