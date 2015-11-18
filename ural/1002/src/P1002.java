@@ -5,14 +5,14 @@ import java.util.HashMap;
 
 /**
  * Created by yfy on 11/18/15.
+ * 1002. Phone Numbers
  */
 
 public class P1002 {
 	public static void main(String[] args) throws Exception {
 		br = new BufferedReader(new InputStreamReader(System.in));
-		int ch;
 		br.mark(1);
-		while ((ch = br.read()) != '-') {
+		while (br.read() != '-') {
 			br.reset();
 			solve();
 			br.mark(1);
