@@ -38,14 +38,14 @@ public class P1001 {
 		while (scan.hasNext())
 			list.add(scan.nextLong());*/
 
-		StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+		StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in), 300000));
 		ArrayList<Long> list = new ArrayList<>();
 		while (st.nextToken() != StreamTokenizer.TT_EOF) {
 			if (st.ttype == StreamTokenizer.TT_NUMBER)
 				list.add((long) st.nval);
 		}
 
-		PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+		PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out), 300000));
 
 		ListIterator<Long> it = list.listIterator(list.size());
 		while (it.hasPrevious())
