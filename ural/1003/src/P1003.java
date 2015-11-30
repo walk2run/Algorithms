@@ -1,5 +1,10 @@
-// Created by qwordy on 11/18/15.
-// 1003. Parity
+/**
+ * Created by qwordy on 11/18/15.
+ * 1003. Parity
+ * [a, b] == sum[1, b] - sum[1, a - 1]
+ * If [a, b] is even then sum[1, b] and sum[1, a - 1] have
+ * the same parity else the different parity.
+ */
 import java.util.HashMap;
 import java.util.Scanner;
 
