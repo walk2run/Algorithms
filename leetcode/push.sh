@@ -1,5 +1,6 @@
 git add */src/*.java
-git add note
+git add */*.rb
+git add note.txt
 git add push.sh
 git commit -m qwordy
 git push
