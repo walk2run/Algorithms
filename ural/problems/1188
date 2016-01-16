@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>1188. Library @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=1188"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=1188&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=1188&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style47.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY ALINK="#1A5CC8" VLINK="#1A5CC8" LINK="#1A5CC8"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=1188&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=1188&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin:0.6em 0em 0em 0em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">1188. Library</H2><DIV class="problem_limits">Time limit: 1.0 second<BR>Memory limit: 64 MB<BR></DIV><DIV ID="problem_text"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Castaway Robinson Crusoe is living alone on a remote island.
+One day a ship carrying a royal library has wrecked nearby.
+Usually Robinson brings any useful stuff from the shipwreck to his
+island, and this time he has brought a big chest with books.</DIV></DIV><IMG SRC="/image/get.aspx/b554ef49-d479-41a4-abec-3df173ea7dba" BORDER="0" ALT="Problem illustration" ALIGN="RIGHT" CLASS="problem_raimage"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Robinson has decided to build a bookcase for these books to create
+his own library. He cut a rectangular niche in the rock for that purpose,
+hammered in wooden pegs, and placed wooden planks on every pair of pegs 
+that have the same height, so that all planks are situated horizontally
+and suit to act as shelves.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Unfortunately, Robinson has discovered that one especially old and big
+tome does not fit in his bookcase. He measured the height and width of this
+tome and has decided to redesign his bookcase in such a way, as to completely
+fit the tome on one of the shelves, taking into account locations of other
+shelves and the dimensions of the niche. With each shelf in the bookcase,
+one of the following operations should be made:
+
+<ol>
+
+<li>Leave the shelf on its original place.</li>
+
+<li>Move the shelf to the left or to the right.</li>
+
+<li>Shorten the shelf by cutting off a part of the plank and optionally
+move it to the left or to the right.</li>
+
+<li>Move one of the pegs to a different place at the same height and 
+move the shelf to the left or to the right.</li>
+
+<li>Shorten the shelf by cutting off a part of the plank, move one of the
+pegs to a different place at the same height, and optionally move the
+shortened shelf to the left or to the right.</li>
+
+<li>Remove the shelf from the bookcase along with both supporting pegs.</li>
+</ol>
+</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">We say that the shelf is properly supported by its pegs, if exactly two
+distinct pegs support the shelf and the center of the shelf is between its
+pegs or coincides with one of the pegs. The original design of Robinson's
+library has all the shelves properly supported by their pegs and lengths of
+all shelves are integer number of inches. The Robinson may only cut an integer
+number of inches from the planks, because he has no tools for more precise
+measurements. All remaining shelves after the redesign must be properly
+supported by their pegs.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">You are to find the way to redesign Robinson's library to fit the special
+old tome without changing original design too much. You have to minimize the
+number of pegs that are to be removed from their original places during
+the redesign (operations 4 and 5 remove one peg, and operation 6 removes
+two pegs). If there are different ways to solve the problem, then you are
+to find the one that minimizes the total length of planks that are to be
+cut off (operations 3 and 5 involve cutting something from the planks,
+and operation 6 counts as if cutting off the whole plank). Width of
+planks and diameter of pegs shall be considered zero.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The tome may not be rotated. The tome should completely (to all its width)
+stand on one of the shelves and may only touch other shelves, their pegs or
+niche's edge.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The first line contains four integers <i>X<sub>N</sub></i>, <i>Y<sub>N</sub></i>, <i>X<sub>T</sub></i>, and <i>Y<sub>T</sub></i>, separated by spaces. They are, correspondingly, width and height of the niche, and width and height of the old tome in inches (1 &le; <i>X<sub>N</sub></i>, <i>Y<sub>N</sub></i>, <i>X<sub>T</sub></i>, <i>Y<sub>T</sub></i> &le; 1000).</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The second line contains a single integer <i>N</i> (1 &le; <i>N</i> &le; 100) that represents the number of the shelves. Then <i>N</i> lines follow. Each line represents a single shelf along with its two supporting pegs, and contains five integer numbers <i>y<sub>i</sub></i>, <i>x<sub>i</sub></i>, <i>l<sub>i</sub></i>, <i>x</i><sub>1<sub><i>i</i></sub></sub>, <i>x</i><sub>2<sub><i>i</i></sub></sub>, separated by spaces, where:
+
+<ul>
+<li><i>y<sub>i</sub></i> (0 &lt; <i>y<sub>i</sub></i> &lt; <i>Y<sub>N</sub></i>)&nbsp;&mdash; the height of the <i>i</i><sup>th</sup> shelf above the bottom of the niche in inches.</li>
+<li><i>x<sub>i</sub></i> (0 &le; <i>x<sub>i</sub></i> &lt; <i>X<sub>N</sub></i>)&nbsp;&mdash; the distance between 
+the left end of the <i>i</i><sup>th</sup> shelf and the left edge of the niche in inches.</li>
+<li><i>l<sub>i</sub></i> (0 &lt; <i>l<sub>i</sub></i> &le; <i>X<sub>N</sub></i>&nbsp;&minus;&nbsp;<i>x<sub>i</sub></i>)&nbsp;&mdash; the length of the <i>i</i><sup>th</sup> shelf in inches.</li>
+<li><i>x</i><sub>1<sub><i>i</i></sub></sub> (0 &le; <i>x</i><sub>1<sub><i>i</i></sub></sub> &le; <i>l<sub>i</sub></i>/2)&nbsp;&mdash; the distance between the left end of the <i>i</i><sup>th</sup> shelf and its leftmost supporting peg in inches.</li>
+<li><i>x</i><sub>2<sub><i>i</i></sub></sub> (<i>l<sub>i</sub></i>/2 &le; <i>x</i><sub>2<sub><i>i</i></sub></sub> &le; <i>l<sub>i</sub></i>;
+    <i>x</i><sub>1<sub><i>i</i></sub></sub> &lt; <i>x</i><sub>2<sub><i>i</i></sub></sub>)&nbsp;&mdash; the distance between the left end of the <i>i</i><sup>th</sup> shelf and its rightmost supporting peg in inches.</li>
+</ul>
+</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">All shelves are situated on different heights and are properly supported by their pegs. The problem is guaranteed to have a solution for the input data.</DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Output two integers separated by a space. The first one is the minimal number of pegs that are to be removed by Robinson from their original locations to place the tome. The second one is the minimal total length of planks in inches that are to be cut off during the redesign that removes the least number of pegs.</DIV></DIV><H3 CLASS="problem_subtitle">Sample</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE CLASS="intable">11 8 4 6
+4
+1 1 7 1 4
+4 3 7 1 6
+7 2 6 3 4
+2 0 3 0 3
+</PRE></TD><TD><PRE CLASS="intable">1 3
+</PRE></TD></TR></TABLE><DIV CLASS="problem_source"><B>Problem Author: </B>Elena Kryuchkova, Roman Elizarov
+<BR><B>Problem Source: </B>2001-2002 ACM Northeastern European Regional Programming Contest<BR></DIV></DIV></DIV><DIV><B>Tags: </B>none  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=1188" STYLE="display:inline; margin:0;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=1188" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 2063</SPAN>    <A HREF="print.aspx?space=1&amp;num=1188" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=1188">Submit solution</A>    <A HREF="forum/?space=1&amp;num=1188">Discussion (6)</A><BR><A HREF="status.aspx?space=1&amp;num=1188">All submissions (1062)</A>    <A HREF="status.aspx?space=1&amp;num=1188&amp;status=accepted">All accepted submissions (226)</A>    <A HREF="rating.aspx?space=1&amp;num=1188">Solutions rating (177)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>

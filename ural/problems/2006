@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>2006. Kirill the Gardener @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=2006"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=2006&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=2006&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style47.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY ALINK="#1A5CC8" VLINK="#1A5CC8" LINK="#1A5CC8"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=2006&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=2006&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin:0.6em 0em 0em 0em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">2006. Kirill the Gardener</H2><DIV class="problem_limits">Time limit: 2.0 second<BR>Memory limit: 128 MB<BR></DIV><DIV ID="problem_text"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Kirill is a great gardener. He loves his garden and takes good care of 
+the plants. The jewel of the garden is a huge green maze. Its walls are 
+hundreds of meters long and consist of intertwined branches of wild 
+bushes. One evening Kirill was trimming the grape leaves when he 
+suddenly realized a horrible fact: he got so consumed by the gardening 
+routine that he haven’t been doing any of his house chores! In fact, the 
+kitchen sink is full of dirty dishes and the potato is lying unpeeled. To 
+make things worse, Kirill’s parents will arrive soon. They will surely 
+punish the boy for his bad behavior… He must detain them and finish the 
+chores! Luckily for Kirill, the only way to the house is through the maze. 
+But his parents walk through the maze every day and know the shortest path 
+good. So there’s only one thing Kirill can do: he  
+should alter the maze making the shortest path in it as long as 
+possible. The boy is running out of time so he can plant only one new bush 
+to block some way. But where should he plant it?</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The maze can be represented as a grid of <i>n</i> rows and <i>m</i> columns. Each 
+bush takes up a single 1&times;1 square. Some cells are initially 
+occupied by bushes and some cells are empty. One can move from any cell to 
+empty side-adjacent cells only. Besides, the maze has two marked cells: 
+the parking space where Kirill’s parents will be situated and the house 
+they will want to get to. Kirill’s task is to choose exactly one empty 
+cell (naturally, this cell mustn’t be the parking space or the house) and 
+to plant a bush in it so that the length of the shortest path from the 
+parking space to the house would be maximum possible.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The first line contains integers <i>n</i> and <i>m</i> that are the number of rows 
+and columns in the maze, correspondingly <nobr>(2 &le; <i>n</i>, <i>m</i> &le; 1000;</nobr>
+<i>n</i> &middot; <i>m</i> &le; 10<sup>5</sup>). The second line contains the coordinates of the 
+parking space (row number and column number). The rows are numbered from  
+the top starting from 1 and the columns are numbered from the left 
+starting from 1. The third line contains the coordinates of the house in  
+the same format. The next <i>n</i> lines contain <i>m</i> characters each and 
+describe the maze. Each line consists of characters &ldquo;.&rdquo; (for an empty 
+cell) and &ldquo;#&rdquo; (for a bush). It is guaranteed that the coordinates of 
+the parking space and the house do not coincide, both these cells are 
+empty, and a path from the parking space to the house exists. It is also guaranteed that the maze has at least one empty cell 
+besides these two cells. </DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Output the coordinates of the cell (row number and column number) where 
+Kirill should plant a bush in order to maximize the length of the shortest 
+path from the parking space to the house.
+If it is possible to plant a bush so that there will be no path 
+from the parking space to the house, Kirill should do it because in this 
+case the parents will have to dig a tunnel to get out of the maze and 
+Kirill will surely have enough time. If there are multiple optimal 
+choices, you may output any of them. </DIV></DIV><H3 CLASS="problem_subtitle">Sample</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE CLASS="intable">4 4
+1 1
+4 4
+..##
+#.##
+#...
+###.
+</PRE></TD><TD><PRE CLASS="intable">2 2
+</PRE></TD></TR></TABLE><DIV CLASS="problem_source"><B>Problem Author: </B>Ilya Kuchumov. (Prepared by Oleg Merkurev)<BR><B>Problem Source: </B>Ural Regional School Programming Contest 2013<BR></DIV></DIV></DIV><DIV><B>Tags: </B>none  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=2006" STYLE="display:inline; margin:0;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=2006" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 2296</SPAN>    <A HREF="print.aspx?space=1&amp;num=2006" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=2006">Submit solution</A>    <A HREF="forum/?space=1&amp;num=2006">Discussion (1)</A><BR><A HREF="status.aspx?space=1&amp;num=2006">All submissions (1105)</A>    <A HREF="status.aspx?space=1&amp;num=2006&amp;status=accepted">All accepted submissions (50)</A>    <A HREF="rating.aspx?space=1&amp;num=2006">Solutions rating (37)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>

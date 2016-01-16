@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>1065. Frontier @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=1065"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=1065&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=1065&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style47.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY ALINK="#1A5CC8" VLINK="#1A5CC8" LINK="#1A5CC8"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=1065&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=1065&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin:0.6em 0em 0em 0em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">1065. Frontier</H2><DIV class="problem_limits">Time limit: 2.0 second<BR>Memory limit: 64 MB<BR></DIV><DIV ID="problem_text"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Lilliputian frontier is a convex polygon with non-zero area.
+The vertices of this polygon are guard towers, which are
+connected by straight lines.
+This frontier is too long and expensive for Lilliputia to maintain;
+therefore the Lilliputian government has decided to revise it to make it shorter.
+However, they don't want to build new guard towers, but to use existing
+ones as a part of a new frontier.</DIV></DIV><DIV CLASS="problem_centered_picture"><IMG SRC="/image/get.aspx/f9cc8051-28d4-461f-84c0-1d6266eb18c6" BORDER="0" ALT="Problem illustration"></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Each day frontier guards inspect the frontier. They go
+from one guard tower to the next one, traversing the frontier
+clockwise. Guard towers are numbered from 1 to <em>N</em> according
+to this inspection order. Frontier revision should not change this
+way of inspection and the area of Lilliputia shall remain non-zero.
+</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">For example, the frontier that is shown on the picture
+(axes are in kilometer scale) is traversed by 
+1&nbsp;-&nbsp;2&nbsp;-&nbsp;3&nbsp;-&nbsp;4&nbsp;-&nbsp;5&nbsp;-&nbsp;1
+route, which is 57.89 kilometers long.
+To make the frontier as short as possible 
+Lilliputia should revise it so that the frontier is traversed by
+2&nbsp;-&nbsp;3&nbsp;-&nbsp;4&nbsp;-&nbsp;2 route, thus reducing 
+its length to 27.31 kilometers.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">However, Lilliputia has a number of historical monuments which
+are its major pride. The historical monuments shall be kept 
+inside Lilliputia at any cost and they should not end up on the 
+frontier.  So, the task is to design the shortest frontier 
+that will preserve all historical monuments inside Lilliputia.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">On the sample picture two historical monuments marked &quot;A&quot; and &quot;B&quot;
+are shown. The desire to keep them inside Lilliputia will lead
+to the shortest frontier with a traverse path 
+1&nbsp;-&nbsp;2&nbsp;-&nbsp;3&nbsp;-&nbsp;4&nbsp;-&nbsp;1
+having 51.78 kilometers in length.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The first line of the input contains two integers <em>N</em>
+and <em>M</em>, separated by a space. <em>N</em> 
+(3&nbsp;&le;&nbsp;<em>N</em>&nbsp;&le;&nbsp;50) is a total number
+of guard towers on the Lilliputian frontier. <em>M</em>
+(0&nbsp;&le;&nbsp;<em>M</em>&nbsp;&le;&nbsp;1000) is a total number
+of historical monuments that are situated inside Lilliputia.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Next <em>N</em> lines contain guard towers' coordinates
+in a clockwise order followed by <em>M</em> lines that 
+contain historical monuments' coordinates. All coordinates
+are represented as two integers (for <em>X</em> and <em>Y</em>
+correspondingly) separated by a space. Coordinates are
+given in a kilometer scale and each coordinate
+does not exceed 10000 by an absolute value. All guard towers
+are located at distinct points.</DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Write to the output a single real number &ndash; the minimal
+possible length of the Lilliputian frontier (in kilometers)
+accurate to two digits to the right of the decimal point.</DIV></DIV><H3 CLASS="problem_subtitle">Samples</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE CLASS="intable">5 0
+8 9
+0 -7
+-8 -7
+-8 1
+-8 9
+</PRE></TD><TD><PRE CLASS="intable">27.31
+</PRE></TD></TR><TR><TD><PRE CLASS="intable">5 2
+8 9
+0 -7
+-8 -7
+-8 1
+-8 9
+-4 -3
+-1 -5
+</PRE></TD><TD><PRE CLASS="intable">51.78
+</PRE></TD></TR></TABLE><DIV CLASS="problem_source"><B>Problem Source: </B>2000-2001 ACM Northeastern European Regional Programming Contest<BR></DIV></DIV></DIV><DIV><B>Tags: </B><A HREF="problemset.aspx?space=1&amp;tag=geometry">geometry</A>  <A HREF="problemset.aspx?space=1&amp;tag=graphs">graph theory</A>  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=1065" STYLE="display:inline; margin:0;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=1065" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 1320</SPAN>    <A HREF="print.aspx?space=1&amp;num=1065" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=1065">Submit solution</A>    <A HREF="forum/?space=1&amp;num=1065">Discussion (3)</A><BR><A HREF="status.aspx?space=1&amp;num=1065">All submissions (3742)</A>    <A HREF="status.aspx?space=1&amp;num=1065&amp;status=accepted">All accepted submissions (1021)</A>    <A HREF="rating.aspx?space=1&amp;num=1065">Solutions rating (813)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>

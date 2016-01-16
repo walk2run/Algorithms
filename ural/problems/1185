@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>1185. Wall @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=1185"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=1185&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=1185&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style47.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY ALINK="#1A5CC8" VLINK="#1A5CC8" LINK="#1A5CC8"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=1185&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=1185&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin:0.6em 0em 0em 0em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">1185. Wall</H2><DIV class="problem_limits">Time limit: 1.0 second<BR>Memory limit: 64 MB<BR></DIV><DIV ID="problem_text"><IMG SRC="/image/get.aspx/875deca6-8c4c-4cc6-8284-87de8687cfa1" BORDER="0" ALT="Problem illustration" ALIGN="RIGHT" CLASS="problem_raimage"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Once upon a time there was a greedy King who ordered his
+chief Architect to build a wall around the King's castle. The
+King was so greedy, that he would not listen to his Architect's 
+proposals to build a beautiful brick wall with a perfect shape
+and nice tall towers. Instead, he ordered to build the wall 
+around the whole castle using the least amount of stone and
+labor, but demanded that the wall should not come closer to
+the castle than a certain distance. If the King finds that
+the Architect has used more resources to build the wall than
+it was absolutely necessary to satisfy those requirements,
+then the Architect will loose his head. Moreover, he demanded
+Architect to introduce at once a plan of the wall listing
+the exact amount of resources that are needed to build
+the wall.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Your task is to help poor Architect to save his head, 
+by writing a program that will find the minimum possible
+length of the wall that he could build around the
+castle to satisfy King's requirements.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The task is somewhat simplified by the fact, that the King's
+castle has a polygonal shape and is situated on a flat ground.
+The Architect has already established a Cartesian coordinate 
+system and has precisely measured the coordinates of
+all castle's vertices in feet.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The first line contains two integers N and L separated by a space. N (3 &le; N &le; 1000) is the number of vertices in the King's castle, and L (1 &le; L &le; 1000) is the minimal number of feet that King allows for the wall to come close to the castle.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Next N lines describe coordinates of castle's vertices in a clockwise order. Each line contains two integers X<sub>i</sub> and Y<sub>i</sub> separated by a space 
+(-10000 &le; X<sub>i</sub>, Y<sub>i</sub> &le; 10000)
+that represent the coordinates of i<sup>th</sup> vertex.
+All vertices are different and the sides of the castle do
+not intersect anywhere except for vertices.</DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Write the single number that represents the minimal possible length of the wall in feet that could be
+built around the castle to satisfy King's requirements.
+You must present the integer number of feet to the King,
+because the floating numbers are not invented yet. However,
+you must round the result in such a way, that it is
+accurate to 8 inches (1 foot is equal to 12 inches),
+since the King will not tolerate larger error in
+the estimates.</DIV></DIV><H3 CLASS="problem_subtitle">Sample</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE CLASS="intable">9 100
+200 400
+300 400
+300 300
+400 300
+400 400
+500 400
+500 200
+350 200
+200 200
+</PRE></TD><TD><PRE CLASS="intable">1628
+</PRE></TD></TR></TABLE><DIV CLASS="problem_source"><B>Problem Author: </B>Sergey Volchenkov, Roman Elizarov
+<BR><B>Problem Source: </B>2001-2002 ACM Northeastern European Regional Programming Contest<BR></DIV></DIV></DIV><DIV><B>Tags: </B><A HREF="problemset.aspx?space=1&amp;tag=geometry">geometry</A>  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=1185" STYLE="display:inline; margin:0;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=1185" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 339</SPAN>    <A HREF="print.aspx?space=1&amp;num=1185" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=1185">Submit solution</A>    <A HREF="forum/?space=1&amp;num=1185">Discussion (29)</A><BR><A HREF="status.aspx?space=1&amp;num=1185">All submissions (7189)</A>    <A HREF="status.aspx?space=1&amp;num=1185&amp;status=accepted">All accepted submissions (1623)</A>    <A HREF="rating.aspx?space=1&amp;num=1185">Solutions rating (1128)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>
