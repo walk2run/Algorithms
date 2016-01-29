@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>1067. Disk Tree @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=1067"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=1067&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=1067&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style50.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=1067&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=1067&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin-top:0.6em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">1067. Disk Tree</H2><DIV class="problem_limits">Time limit: 2.0 second<BR>Memory limit: 64 MB<BR></DIV><DIV ID="problem_text"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Hacker Bill has accidentally lost all the information from his
+workstation's hard drive and he has no backup copies of its contents. 
+He does not regret for the loss of the files themselves, but
+for the very nice and convenient directory structure that he had
+created and cherished during years of work.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Fortunately, Bill has several copies of directory listings
+from his hard drive. Using those listings he was able to recover
+full paths (like &quot;WINNT\SYSTEM32\CERTSRV\CERTCO~1\X86&quot;) for some directories. 
+He put all of them in a file by writing each path he has found 
+on a separate line.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Your task is to write a program that will help Bill to restore
+his state of the art directory structure by providing nicely formatted
+directory tree.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The first line of the input contains single integer number 
+<em>N</em> (1&nbsp;&le;&nbsp;<em>N</em>&nbsp;&le;&nbsp;500)
+that denotes a total number of distinct directory paths. 
+Then <em>N</em> lines with directory paths follow. 
+Each directory path occupies a single line and does not 
+contain any spaces, including leading or trailing ones. 
+No path exceeds 80 characters.
+Each path is listed once and consists of a number of 
+directory names separated by a back slash 
+(&quot;<strong><tt>\</tt></strong>&quot;).</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Each directory name consists of 1 to 8 uppercase letters,
+numbers, or the special characters from the following 
+list: exclamation mark, number sign, dollar sign, percent sign, 
+ampersand, apostrophe, opening and closing parenthesis, 
+hyphen sign, commercial at, circumflex accent, underscore, 
+grave accent, opening and closing curly bracket, and tilde 
+(&quot;<strong><tt>!#$%&amp;'()-@^_`{}~</tt></strong>&quot;).</DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Write to the output the formatted directory tree. Each 
+directory name shall be listed on its own line preceded by a number 
+of spaces that indicate its depth in the directory hierarchy. The 
+subdirectories shall be listed in lexicographic order immediately 
+after their parent directories preceded by one more space than their 
+parent directory. Top level directories shall have no spaces printed
+before their names and shall be listed in lexicographic order. 
+See sample below for clarification of the output format.</DIV></DIV><H3 CLASS="problem_subtitle">Sample</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE>7
+WINNT\SYSTEM32\CONFIG
+GAMES
+WINNT\DRIVERS
+HOME
+WIN\SOFT
+GAMES\DRIVERS
+WINNT\SYSTEM32\CERTSRV\CERTCO~1\X86
+</PRE></TD><TD><PRE>GAMES
+ DRIVERS
+HOME
+WIN
+ SOFT
+WINNT
+ DRIVERS
+ SYSTEM32
+  CERTSRV
+   CERTCO~1
+    X86
+  CONFIG
+</PRE></TD></TR></TABLE><DIV CLASS="problem_source"><B>Problem Source: </B>2000-2001 ACM Northeastern European Regional Programming Contest<BR></DIV></DIV></DIV><DIV><B>Tags: </B><A HREF="problemset.aspx?space=1&amp;tag=structure">data structures</A>  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=1067" STYLE="display:inline;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=1067" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 608</SPAN>    <A HREF="print.aspx?space=1&amp;num=1067" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=1067">Submit solution</A>    <A HREF="forum/?space=1&amp;num=1067">Discussion (40)</A><BR><A HREF="status.aspx?space=1&amp;num=1067">All submissions (7940)</A>    <A HREF="status.aspx?space=1&amp;num=1067&amp;status=accepted">All accepted submissions (2638)</A>    <A HREF="rating.aspx?space=1&amp;num=1067">Solutions rating (1779)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({ id:20918869, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>

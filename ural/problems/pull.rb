@@ -32,7 +32,7 @@ def get
 		$id += 1
 	end
 	is = id.to_s
-	filename = is + '.html'
+	filename = 'p'+ is
 	if !File.exist? filename
 		#puts 'Getting ' + is
 		content = Net::HTTP.get(URI($url + is))

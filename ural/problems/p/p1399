@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>1399. Economical Director @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=1399"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=1399&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=1399&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style50.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=1399&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=1399&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin-top:0.6em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">1399. Economical Director</H2><DIV class="problem_limits">Time limit: 2.0 second<BR>Memory limit: 64 MB<BR></DIV><DIV ID="problem_text"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The director of the household appliance chain “Rodonit” was calculating the month’s losses. The time was over when buyers were taking away the purchased goods from a store immediately after buying them. Now they demanded a free delivery and wanted to be telephoned in advance in order to agree upon the time of delivery. 
+</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">There are ten “Rodonit” stores in the city. The director understands that it is not always rational to deliver items directly from the stores where they were bought. On the outskirts of the city, there is a warehouse of household appliances, and next to the warehouse there is a garage. Every night employees compile a list of goods that have been bought during the day, with information about the buyers: names, addresses, and telephone numbers. These goods are delivered during the next day. The company has only one lorry for delivering goods. The lorry has a limited carrying capacity, therefore several trips are sometimes necessary to deliver the goods. The employees arrange the delivery schedule: which items should the lorry driver take from the warehouse for each trip and the order of visits to the buyers. 
+</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">In order to save the fuel, the total length of the trips must be minimal. The employees use a city map to measure the distances between objects (which are the warehouse and the houses of the buyers from the list) and start the complicated optimization process. The following assumptions are made: 
+<ol>
+<li>The distance between the warehouse and the garage is 0.</li>
+<li>Let <i>D</i>(<i>i</i>, <i>j</i>) be the distance between objects <i>i</i> and <i>j</i>. Then for any objects <i>i</i>, <i>j</i>, <i>k</i>  
+<ol type="a">
+<li><i>D</i>(<i>i</i>, <i>i</i>) = 0.</li>
+<li><i>D</i>(<i>i</i>, <i>j</i>) = <i>D</i>(<i>j</i>, <i>i</i>).</li>
+<li><i>D</i>(<i>i</i>, <i>k</i>) &le; <i>D</i>(<i>i</i>, <i>j</i>) + <i>D</i>(<i>j</i>, <i>k</i>).</li>
+</ol></li>
+<li>In the end of each trip the lorry must return to the garage.</li>
+<li>The sum of the masses of the goods carried by the lorry at one time must not exceed its carrying capacity.</li>
+</ol>
+
+The director must pay extra wages to the employees for their night work. In order to economize, he decided to employ a programmer who would write a program producing the delivery schedule.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">In the first line there are the number of buyers <i>M</i> &le; 20, the number of items <i>N</i> &le; 50, and the carrying capacity of the lorry <i>L<sub>max</sub></i>&nbsp;&le;&nbsp;3000. In the following lines there is a matrix <i>D</i> of size (<i>M</i>+1)&times;(<i>M</i>+1) containing distances between the objects (the warehouse is assigned the number 0 and the buyers are assigned numbers from 1 to <i>M</i>). Each of the following <i>N</i> lines describes the corresponding item: its mass and the number of the buyer (an integer from 1 to <i>M</i>). All the masses and distances are integers in the range from 1 to 100.</DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">In the first line output the number of trips that should be made. Then describe each trip giving the following information. The first line must contain the numbers of the items delivered during this trip, given in an arbitrary order and separated with a space (these numbers are in the range from 1 to <i>N</i>). The second line must contain the maximal load of the lorry during this trip (which is the total mass of the items being delivered). In the third line, output the number of objects in the order of traveling separated with a space. In the fourth line, output the total length of the trip. In the last line output the total length of all the trips. The blocks describing the trips must be separated from each other and from the first and last lines by an empty line.</DIV></DIV><H3 CLASS="problem_subtitle">Sample</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE>7 10 5
+0 2 3 4 5 6 5 4
+2 0 4 5 6 7 6 5
+3 4 0 3 4 5 4 1
+4 5 3 0 3 4 1 2
+5 6 4 3 0 1 2 3
+6 7 5 4 1 0 3 4
+5 6 4 1 2 3 0 3
+4 5 1 2 3 4 3 0
+3 1
+5 2
+1 3
+1 4
+2 5
+1 6
+2 7
+1 5
+2 2
+1 1</PRE></TD><TD><PRE>4
+
+1 10 
+4
+0 1 0
+4
+
+4 5 6 8 
+5
+0 4 5 6 0
+14
+
+2 
+5
+0 2 0
+6
+
+3 7 9 
+5
+0 3 7 2 0
+10
+
+34</PRE></TD></TR></TABLE><H3 CLASS="problem_subtitle">Notes</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Your program will pass a test if it produces an answer that is no worse than the answer produced by the jury’s program for the same data.</DIV></DIV><DIV CLASS="problem_source"><B>Problem Author: </B>Alexander Ipatov<BR></DIV></DIV></DIV><DIV><B>Tags: </B><A HREF="problemset.aspx?space=1&amp;tag=graphs">graph theory</A>  <A HREF="problemset.aspx?space=1&amp;tag=hardest">hardest problem</A>  <A HREF="problemset.aspx?space=1&amp;tag=unusual">unusual problem</A>  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=1399" STYLE="display:inline;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=1399" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 12703</SPAN>    <A HREF="print.aspx?space=1&amp;num=1399" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=1399">Submit solution</A>    <A HREF="forum/?space=1&amp;num=1399">Discussion (3)</A><BR><A HREF="status.aspx?space=1&amp;num=1399">All submissions (2388)</A>    <A HREF="status.aspx?space=1&amp;num=1399&amp;status=accepted">All accepted submissions (88)</A>    <A HREF="rating.aspx?space=1&amp;num=1399">Solutions rating (18)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({ id:20918869, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>
