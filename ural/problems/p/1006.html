@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>1006. Square Frames @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=1006"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=1006&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=1006&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style50.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=1006&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=1006&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin-top:0.6em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">1006. Square Frames</H2><DIV class="problem_limits">Time limit: 2.0 second<BR>Memory limit: 64 MB<BR></DIV><DIV ID="problem_text"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Frame consists of the following characters:
+</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal"><table align="center">
+<tr>
+ <th>Character</th>
+ <th>ASCII code</th>
+ <th>Description</th>
+</tr>
+<tr>
+ <td align="center">┌</td>
+ <td align="center">218</td>
+ <td>Left upper corner</td>
+</tr>
+<tr>
+ <td align="center">┐</td>
+ <td align="center">191</td>
+ <td>Right upper corner</td>
+</tr>
+<tr>
+ <td align="center">└</td>
+ <td align="center">192</td>
+ <td>Left bottom corner</td>
+</tr>
+<tr>
+ <td align="center">┘</td>
+ <td align="center">217</td>
+ <td>Right bottom corner</td>
+</tr>
+<tr>
+ <td align="center">│</td>
+ <td align="center">179</td>
+ <td>Vertical (left and right) border line</td>
+</tr>
+<tr>
+ <td align="center">─</td>
+ <td align="center">196</td>
+ <td>Horizontal (top and bottom) border line</td>
+</tr>
+</table></DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal"><i>N</i> square frames (1 &le; <i>N</i> &le; 15) were sequentially drawn on screen 50 characters wide 20 lines tall. If parts of some frames intersect, only the part of the frame drawn latter remains visible. Each frame lies fully on the screen.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">You need to write a program that builds a possible sequence of frames that (if drawn sequentially) would produce the same picture on the screen. Your sequence does not have to be the same with the original sequence used to build the picture on the screen. However, it should not contain more than 2000 frames.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_centered_picture"><IMG SRC="/image/get.aspx/d6291980-6679-4746-9b21-513532606430" BORDER="0" ALT="Problem illustration"></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The screen area was originally filled with dots (ASCII 46). Input contains the final picture on the screen after the sequence of frames is drawn.</DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Your program should write to output the number of frames in the sequence built and the frames coordinates as follows:</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal"><i>K</i><BR>
+<i>X</i><sub>1</sub> <i>Y</i><sub>1</sub> <i>A</i><sub>1</sub><BR>
+&hellip;<BR>
+<i>X<sub>k</sub></i> <i>Y<sub>k</sub></i> <i>A<sub>k</sub></i>
+</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Here <i>K</i> is the number of frames, <i>X<sub>i</sub></i> and <i>Y<sub>i</sub></i> are coordinates of the upper left frame corner (0 &le; <i>X<sub>i</sub></i> &le; 49, 0 &le; <i>Y<sub>i</sub></i> &le; 19) and <i>A<sub>i</sub></i> is the length of the frame side (2 &le; <i>A<sub>i</sub></i>). All numbers must be delimited with one or more spaces and/or line breaks.</DIV></DIV><H3 CLASS="problem_subtitle">Sample</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE>(see the figure above)</PRE></TD><TD><PRE>6
+16 11 7
+32 14 4
+4 8 8
+11 6 7
+36 11 3
+28 8 3
+</PRE></TD></TR></TABLE><DIV CLASS="problem_source"><B>Problem Source: </B>USU Championship 1997<BR></DIV></DIV></DIV><DIV><B>Tags: </B>none  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=1006" STYLE="display:inline;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=1006" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 864</SPAN>    <A HREF="print.aspx?space=1&amp;num=1006" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=1006">Submit solution</A>    <A HREF="forum/?space=1&amp;num=1006">Discussion (38)</A><BR><A HREF="status.aspx?space=1&amp;num=1006">All submissions (8139)</A>    <A HREF="status.aspx?space=1&amp;num=1006&amp;status=accepted">All accepted submissions (1691)</A>    <A HREF="rating.aspx?space=1&amp;num=1006">Solutions rating (1358)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({ id:20918869, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>

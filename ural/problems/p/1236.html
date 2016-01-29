@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>1236. Decoding Task @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=1236"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=1236&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=1236&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style50.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=1236&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=1236&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin-top:0.6em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">1236. Decoding Task</H2><DIV class="problem_limits">Time limit: 1.0 second<BR>Memory limit: 64 MB<BR></DIV><DIV ID="problem_text"><IMG SRC="/image/get.aspx/93e74c2a-83f5-49a5-a2ca-c43dd724132e" BORDER="0" ALT="Problem illustration" ALIGN="RIGHT" CLASS="problem_raimage"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">In the near future any research and publications about cryptography are
+outlawed throughout the world on the grounds of national security concerns. 
+The reasoning for this is clear and widely accepted by all governments - 
+if cryptography literature is public like in the old times, then everybody 
+(even criminals and terrorists) could easily use it to hide their
+malicious plans from the national and international security forces.
+Consequently, public cryptographic algorithms and systems have ceased to 
+exist, and everybody who needs strong protection for their secrets is forced 
+to invent proprietary algorithms.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The ACM Corporation has lots of competitors who are eager to learn its 
+trade secrets. Moreover, the job to protect their secrets is complicated by 
+the fact, that they are forced to use intercontinental communication lines 
+which are easy to eavesdrop on, unlike internal lines of the ACM Corporation
+which are well guarded. Therefore, the ACM Corporation have invented the 
+Intercontinental Cryptographic Protection Code (ICPC) which they are very 
+proud of, and which is considered unbreakable - nobody has even tried to
+break it yet, but that is about to change.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The group of hackers was hired by the rival company, which does not disclose
+its name to them, to break ICPC. As the first step, they have bribed one of the
+programmers who implemented the software for ICPC and have learned how ICPC works.
+It turns out, the ICPC uses very long key which is a sequence of bytes generated
+by some sophisticated and random physical process. This key is changed weekly and
+is used to encrypt all messages that are sent over intercontinental communication
+lines during the week. This programmer has also proudly told them, that ICPC is
+the fastest code in the world, because (having the benefit of highly sophisticated
+code generation) they simply perform bitwise exclusive OR (XOR) operation between
+the bytes of the message and the key. That is, the i<sup>th</sup> byte of the encrypted
+message E<sub>i</sub> = K<sub>i</sub> XOR C<sub>i</sub>, where K<sub>i</sub> is the
+i<sup>th</sup> byte of the key and C<sub>i</sub> is the i<sup>th</sup> byte of the
+original clear-text message.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Having learned how ICPC works, they have started to look for the way to reliably 
+obtain the key every week, which is the only thing that is still missing to 
+listen for all intercontinental communications of the ACM Corporation 
+(eavesdropping on the intercontinental lines themselves has indeed turned out to 
+be an easy task). An attempt to bribe the security officers who guard and 
+distribute the key has failed, because the security officers (having the 
+profession with one the highest salaries of that time) have turned out to be 
+too expensive to bribe.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">During the search for alternative solutions, they have stumbled upon a clerk,
+who sends weekly newsletters to various employees and departments. Fortunately,
+these newsletters are being sent just after the change of the key and the messages
+are usually long enough to recover sufficient portions of the key by studying 
+original newsletters and their encoded forms. However, they could not
+covertly find anyone who will disclose the newsletter contents on a weekly basis,
+because all the employees were bound by a Non-Disclosure Agreement (NDA) and the 
+penalty for the disclosure of any corporate message according to this NDA is death.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Yet they were able to convince this clerk (for a small reward) to do a seemingly
+innocent thing. That is, while sending the copies of newsletter throughout the 
+corporation, he was instructed to insert an extra space character in the beginning
+of some messages but send other copies in their original form. Now the task to
+recover the key is straightforward and it is you, who shall create a program 
+for this. The program is given two ICPCed messages where the first message
+is N bytes, and the second one is N+1 bytes and is the result of encoding the
+same clear-text messages as the first one, but with one extra space character
+(represented by the byte with the decimal value of 32) in the beginning. The
+program shall find the first N+1 bytes of the key that was used to encode 
+the messages.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The input consists of two lines. The first line consists of 2N characters and
+represents the encoded message N bytes long. The second line consists of 2N+2 characters
+and represents the encoded message N+1 bytes long. 
+Here 1&nbsp;&le;&nbsp;N&nbsp;&le;&nbsp;10000. Each message is written
+on a single line in a hexadecimal form byte by byte without spaces. 
+Each byte of the message is represented by two characters '0'-'9', 'A'-'F' 
+that represent the hexadecimal value of the corresponding byte.</DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Write a single line that represents N+1 bytes of the
+recovered key in the same hexadecimal format as in the input.</DIV></DIV><H3 CLASS="problem_subtitle">Sample</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE>05262C5269143F314C2A69651A264B
+610728413B63072C52222169720B425E
+</PRE></TD><TD><PRE>41434D2049435043204E454552432732
+</PRE></TD></TR></TABLE><DIV CLASS="problem_source"><B>Problem Author: </B>Elena Kruchkova<BR><B>Problem Source: </B>2002-2003 ACM Northeastern European Regional Programming Contest<BR></DIV></DIV></DIV><DIV><B>Tags: </B>none  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=1236" STYLE="display:inline;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=1236" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 483</SPAN>    <A HREF="print.aspx?space=1&amp;num=1236" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=1236">Submit solution</A>    <A HREF="forum/?space=1&amp;num=1236">Discussion (11)</A><BR><A HREF="status.aspx?space=1&amp;num=1236">All submissions (1612)</A>    <A HREF="status.aspx?space=1&amp;num=1236&amp;status=accepted">All accepted submissions (881)</A>    <A HREF="rating.aspx?space=1&amp;num=1236">Solutions rating (802)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({ id:20918869, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>

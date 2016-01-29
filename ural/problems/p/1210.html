@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META NAME="viewport" CONTENT="width=768"><META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"><TITLE>1210. Kind Spirits @ Timus Online Judge</TITLE><LINK REL="alternate" HREFLANG="x-default" HREF="/problem.aspx?num=1210"><LINK REL="alternate" HREFLANG="en-us" HREF="/problem.aspx?num=1210&amp;locale=en"><LINK REL="alternate" HREFLANG="ru-ru" HREF="/problem.aspx?num=1210&amp;locale=ru"><LINK REL="stylesheet" TYPE="text/css" HREF="/style50.css"><LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.ico"></HEAD><BODY><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="body"><TR><TD CLASS="caption"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" CLASS="locale"><A HREF="/problem.aspx?num=1210&amp;locale=en">ENG</A>&nbsp;&nbsp;<A HREF="/problem.aspx?num=1210&amp;locale=ru">RUS</A></TD><TD CLASS="title"><A HREF="/">Timus Online Judge</A></TD><TD WIDTH="130"></TD></TR></TABLE></TD></TR><TR><TD CLASS="panel"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="130" VALIGN="TOP" ALIGN="CENTER" STYLE="padding-bottom:5px;"><A HREF="/"><IMG BORDER="0" SRC="/images/usu-summer.jpg" HEIGHT="134" WIDTH="106" ALT=""></A></TD><TD VALIGN="TOP" ALIGN="LEFT"><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" CLASS="panel"><TR><TH WIDTH="25%"><DIV>Online Judge</DIV></TH><TH WIDTH="25%"><DIV>Problems</DIV></TH><TH WIDTH="25%"><DIV>Authors</DIV></TH><TH WIDTH="25%"><DIV>Online contests</DIV></TH></TR><TR><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/">About Online Judge</A><BR><A HREF="/help.aspx?topic=faq">Frequently asked questions</A><BR><A HREF="/news.aspx">Site news</A><BR><A HREF="/forum/">Webboard</A><BR><A HREF="/help.aspx?topic=links">Links</A><BR></TD><TD VALIGN="TOP" ALIGN="LEFT"><A HREF="/problemset.aspx">Problem set</A><BR><A HREF="/submit.aspx">Submit solution</A><BR><A HREF="/status.aspx">Judge status</A><BR><A HREF="/help.aspx?topic=judge">Guide</A><BR></TD><TD VALIGN="TOP"><A HREF="/register.aspx">Register</A><BR><A HREF="/authedit.aspx">Update your info</A><BR><A HREF="/ranklist.aspx">Authors ranklist</A><BR><FORM ACTION="/search.aspx" METHOD="GET" STYLE="margin-top:0.6em;"><INPUT NAME="Str" SIZE="12" VALUE="" PLACEHOLDER="Author’s name"> <INPUT TYPE="SUBMIT" VALUE="Search"></FORM></TD><TD VALIGN="TOP"><A HREF="/contest.aspx">Current contest</A><BR><A HREF="/schedule.aspx">Scheduled contests</A><BR><A HREF="/archive.aspx">Past contests</A><BR><A HREF="/help.aspx?topic=contest">Rules</A><BR></TD></TR></TABLE></TD></TR></TABLE></TD></TR><TR><TD STYLE="padding-top: 32px; padding-bottom: 20px;"><TABLE ALIGN="CENTER" CELLSPACING="0" CELLPADDING="0"><TR><TD WIDTH="800"><DIV CLASS="problem_content"><H2 class="problem_title">1210. Kind Spirits</H2><DIV class="problem_limits">Time limit: 1.0 second<BR>Memory limit: 64 MB<BR></DIV><DIV ID="problem_text"><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">Ivanushka the Fool lives at the planet of 0-level. It's very unpleasant 
+to live there. An awful climate, 80 hours working week, ugly girls&hellip; He, as well as every 
+inhabitant of his planet, dreams to get to a planet of <I>N</i>-th level. To the paradise.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">At each of the <I>i</i>-th level planets there are several 
+hyperspace transfers to some of the (<I>i</i>+1)-st level planets (but there are no 
+reverse ways). Every transfer is guarded by a spirit. The spirits are 
+usually evil: they demand many galactic bank-notes for each transfer. You know, everyone wants to go to a higher level planet. And one has to pay for the pleasure. More than Ivanushka can even imagine. However, extraordinary situations like a lack of a labor-force at one of the higher level planets sometimes happen, and then the spirits - the guards of the transfers &mdash; become kind. Sometimes they give galactic bank-notes themselves if only someone goes to their planets.</DIV></DIV><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">In order to embody his dream of heavenly planet 
+Ivanushka  has done two things. First of all, 
+he has borrowed a complete map of the Universe. It's written on the map 
+how much the spirits demand or give for a transfer from this or that planet to another one of the next higher level. Secondly, he has hired a staff of young talanted 
+programmers in order that they will help him to draw the way on the map from 
+his planet to the one of <I>N</i>th level so that he would spend for the 
+spirits as little money or even earn as much as it is possible.</DIV></DIV><H3 CLASS="problem_subtitle">Input</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">The first line contains an integer <I>N</i> 
+(0 &lt; <I>N</i> &lt; 30) &mdash; an amount of levels of the planets on Ivanushka's 
+map. Then follow <I>N</i> blocks of information that describe interlevel 
+transfers. More precisely, the <I>i</i>th informative block describes the 
+scheme of transfers from (<I>i</i>&minus;1)-st level planets to the ones of 
+<I>i</i>th level. Those blocks are separated with a line that contains the 
+only symbol "*". Planets of each level are numbered with sequential positive 
+integers starting from 1. Each level contains not more than 30 planets. There 
+is the only planet of 0-level: the one that Ivanushka lives at. The first 
+line of a block contains a number <I>K<SUB>i</sub></i> &mdash; an amount of planets 
+of the <I>i</i>th level. THen follow <I>K<SUB>i</sub></i> lines &mdash; one for each 
+planet of the <I>i</i>th level. Every line consists of numbers of planets 
+separated with a space of the previous (<I>i</i>&minus;1)st level that one can get 
+from them to the current planet, and the corresponding fees. A fee for each 
+transfer is an integer number from &minus;32768 to 32767; a negative fee means that 
+the kind spirit is ready to pay for such a transfer. Each description line 
+is ended by zero.</DIV></DIV><H3 CLASS="problem_subtitle">Output</H3><DIV CLASS="problem_par"><DIV CLASS="problem_par_normal">should contain the only number &mdash; the minimal fee that Ivanushka 
+might pay for a transfer to some planet of the <I>N</i>th level. The answer 
+may be negative: it means that Ivanushka will not only get to a heavenly 
+planet, but will earn some galactic bank-notes. It's known that there exists 
+if only one way from Ivanushka's planet to the one of <I>N</i>th level.</DIV></DIV><DIV CLASS="problem_centered_picture"><IMG SRC="/image/get.aspx/df59aa75-4db7-4589-9349-0c270ed49211" BORDER="0" ALT="Problem illustration"></DIV><H3 CLASS="problem_subtitle">Sample</H3><TABLE CLASS="sample"><TR><TH WIDTH="350">input</TH><TH WIDTH="350">output</TH></TR><TR><TD><PRE>3
+2
+1 15 0
+1 5 0
+*
+3
+1 -5 2 10 0
+1 3 0
+2 40 0
+*
+2
+1 1 2 5 3 -5 0
+2 -19 3 -20 0
+</PRE></TD><TD><PRE>-1
+</PRE></TD></TR></TABLE><DIV CLASS="problem_source"><B>Problem Author: </B>Leonid Volkov<BR><B>Problem Source: </B>USU Open Collegiate Programming Contest October'2002 Junior Session<BR></DIV></DIV></DIV><DIV><B>Tags: </B><A HREF="problemset.aspx?space=1&amp;tag=graphs">graph theory</A>  <SPAN CLASS="problem_tags_toggle">(<FORM METHOD="POST" ACTION="problem.aspx?space=1&amp;num=1210" STYLE="display:inline;" ID="ToggleTagsForm"><A HREF="problem.aspx?space=1&amp;num=1210" ONCLICK="document.getElementById('ToggleTagsForm').submit();return false;"><INPUT TYPE="hidden" NAME="Action" VALUE="HideTags">hide tags for unsolved problems</A></FORM>)</SPAN></DIV><DIV CLASS="problem_links"><SPAN>Difficulty: 155</SPAN>    <A HREF="print.aspx?space=1&amp;num=1210" TARGET="_blank">Printable version</A>    <A HREF="submit.aspx?space=1&amp;num=1210">Submit solution</A>    <A HREF="forum/?space=1&amp;num=1210">Discussion (29)</A><BR><A HREF="status.aspx?space=1&amp;num=1210">All submissions (7956)</A>    <A HREF="status.aspx?space=1&amp;num=1210&amp;status=accepted">All accepted submissions (3414)</A>    <A HREF="rating.aspx?space=1&amp;num=1210">Solutions rating (2510)</A></DIV></TD></TR></TABLE></TD></TR><TR><TD CLASS="footer"><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({ id:20918869, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;" alt=""></div></noscript>© 2000–2016 <A HREF="/team.aspx">Timus Online Judge Team</A>. All rights reserved.</TD></TR></TABLE></BODY></HTML>
