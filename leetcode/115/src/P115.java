@@ -4,9 +4,8 @@
  */
 
 public class Solution {
-	public int numDistinct(String s, String t) {
-
-	}
+  public int numDistinct(String s, String t) {
+  }
 }
 
 public class P115 {
