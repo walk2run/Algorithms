@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.ListIterator;
+import java.util.StringTokenizer;
+import java.util.Scanner;
 
 /**
  * Created by yfy on 11/12/15.
@@ -33,20 +35,27 @@ import java.util.ListIterator;
 
 public class P1001 {
 	public static void main(String[] args) throws Exception {
-/*		Scanner scan = new Scanner(System.in);
 		ArrayList<Long> list = new ArrayList<>();
-		while (scan.hasNext())
-			list.add(scan.nextLong());*/
 
-		StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in), 300000));
-		ArrayList<Long> list = new ArrayList<>();
+//		Scanner scan = new Scanner(new BufferedInputStream(System.in));
+//		while (scan.hasNext())
+//			list.add(scan.nextLong());
+
+		StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
 		while (st.nextToken() != StreamTokenizer.TT_EOF) {
-			if (st.ttype == StreamTokenizer.TT_NUMBER)
+//			if (st.ttype == StreamTokenizer.TT_NUMBER)
 				list.add((long) st.nval);
 		}
 
-		PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out), 300000));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String line;
+		while ((line = br.readLine()) != null) {
+			StringTokenizer st = new StringTokenizer(line);
+			while (st.hasMoreTokens())
+			  list.add(Long.parseLong(st.nextToken()));
+		}
 
+		PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
 		ListIterator<Long> it = list.listIterator(list.size());
 		while (it.hasPrevious())
 			pw.println(Math.sqrt(it.previous()));
