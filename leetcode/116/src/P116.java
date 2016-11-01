@@ -11,7 +11,20 @@ class TreeLinkNode {
 
 class Solution {
   public void connect(TreeLinkNode root) {
-
+    if (root == null) return;
+    TreeLinkNode p, p2, c;
+    p = root;
+    while (p.left != null) {
+      p2 = p.left;
+      c = null;
+      while (p != null) {
+        p.left.next = p.right;
+        if (c != null) c.next = p.left;
+        c = p.right;
+        p = p.next;
+      }
+      p = p2;
+    }
   }
 }
 
