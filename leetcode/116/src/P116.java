@@ -1,6 +1,7 @@
 /**
  * Created by yfy on 5/24/16.
  * 116. Populating Next Right Pointers in Each Node
+ * bfs
  */
 
 class TreeLinkNode {

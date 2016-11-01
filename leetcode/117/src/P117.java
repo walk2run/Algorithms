@@ -14,13 +14,23 @@ class Solution {
     if (root == null) return;
     TreeLinkNode p, p2, c;
     p = root;
-    while (p.left != null) {
-      p2 = p.left;
-      c = null;
+    while (p != null) {
+      p2 = c = null;
       while (p != null) {
-        p.left.next = p.right;
-        if (c != null) c.next = p.left;
-        c = p.right;
+        if (p.left != null) {
+          if (p2 == null) p2 = p.left;
+          if (c != null) c.next = p.left;
+          if (p.right != null)
+            c = p.left.next = p.right;
+          else
+            c = p.left;
+        } else {
+          if (p.right != null) {
+            if (p2 == null) p2 = p.right;
+            if (c != null) c.next = p.right;
+            c = p.right;
+          }
+        }
         p = p.next;
       }
       p = p2;
