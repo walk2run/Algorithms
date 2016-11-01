@@ -11,7 +11,7 @@ class Solution {
 	}
 }
 
-public class ReserseWordsInAString {
+public class P151 {
 
 	/**
 	 * @param args

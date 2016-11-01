@@ -30,7 +30,7 @@ class Solution {
 	List<Integer> stack = new ArrayList<Integer>();
 }
 
-class Main {
+class P150 {
 	public static void main(String[] args) {
 		String[] tokens = { "4", "13", "5", "/", "+" };
 		System.out.println(new Solution().evalRPN(tokens));

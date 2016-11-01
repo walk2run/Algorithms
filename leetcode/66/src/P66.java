@@ -17,7 +17,7 @@ class Solution {
 	}
 }
 
-class Main {
+class P66 {
 	public static void main(String[] args) {
 		int[] sum = new Solution().plusOne(new int[] {9, 9, 9});
 		for (int x : sum)

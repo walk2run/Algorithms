@@ -24,7 +24,7 @@ class Solution {
 	int[] S;
 }
 
-public class Subsets {
+public class P78 {
 	public static void main(String[] args) {
 		new Solution().subsets(new int[] { 1, 2, 3 });
 	}

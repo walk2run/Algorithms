@@ -34,7 +34,7 @@ class Solution {
 	List<Integer> list = new ArrayList<Integer>();
 }
 
-public class CombinationSumII {
+public class P40 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
