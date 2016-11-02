@@ -1,9 +1,13 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by yfy on 11/1/16.
  * Two Sum
+ * 1. hash
+ * 2. sort, squeeze
  */
 
 class Solution {
@@ -25,6 +29,37 @@ class Solution {
       }
     }
     return null;
+  }
+}
+
+class Solution2 {
+  public int[] twoSum(int[] nums, int target) {
+    int i, j, sum;
+    List<Node> list = new ArrayList<>();
+    for (i = 0; i < nums.length; i++)
+      list.add(new Node(nums[i], i));
+    list.sort((o1, o2) -> o1.num - o2.num);
+    i = 0;
+    j = nums.length - 1;
+    while (true) {
+      Node node1 = list.get(i);
+      Node node2 = list.get(j);
+      sum = node1.num + node2.num;
+      if (sum == target)
+        return new int[]{Math.min(node1.pos, node2.pos), Math.max(node1.pos, node2.pos)};
+      if (sum < target)
+        i++;
+      else
+        j--;
+    }
+  }
+
+  private static class Node {
+    int num, pos;
+    public Node(int n, int p) {
+      num = n;
+      pos = p;
+    }
   }
 }
 
