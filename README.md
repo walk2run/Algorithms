@@ -1,2 +1,2 @@
-# Readme
-Leetcode and sgu
+# Algorithms
+Solutions to some algorithm problems
