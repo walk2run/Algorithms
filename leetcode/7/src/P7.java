@@ -19,7 +19,17 @@ class Solution {
 
 class Solution2 {
   public int reverse(int x) {
-    
+    int sign = x >= 0 ? 1 : -1;
+    x = Math.abs(x);
+    long r = 0;
+    while (x > 0) {
+      r = r * 10 + x % 10;
+      x /= 10;
+    }
+    r = r * sign;
+    if (r < Integer.MIN_VALUE || r > Integer.MAX_VALUE)
+      return 0;
+    return (int)r;
   }
 }
 
