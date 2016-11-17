@@ -28,7 +28,7 @@ class Solution:
 		if index & 1:
 			left = index / 2 - maxLen / 2
 		else:
-			left = index / 2 - 1- maxLen / 2
+			left = index / 2 - 1 - maxLen / 2
 		return s[left : left + maxLen]
 
 def buildStr(s):
