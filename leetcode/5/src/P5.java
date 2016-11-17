@@ -47,6 +47,40 @@ class Solution {
   }
 }
 
+class Solution2 {
+  public String longestPalindrome(String s) {
+    int i, j, n, last;
+    n = s.length();
+
+    int[] d = new int[n];  // odd
+    Arrays.fill(d, 1);
+    last = 0;
+    for (i = 1; i < n; i++) {
+      if (2 * last - i >= 0 && s.charAt(i) == s.charAt(2 * last - i))
+        d[last]++;
+      else {
+        for (j = last + 1; j < i; j++) {
+          d[j] = d[2 * last - j];
+          if (d[j] > i - j) {
+            d[j] = i - j;
+            if (s.charAt(i) == s.charAt(j - d[j])) {
+              d[last = j]++;
+              break;
+            }
+          }
+        }
+        if (j == i) last = i;
+      }
+    }
+
+    d = new int[n];
+    last = 0;
+    for (i = 1; i < n; i++) {
+      
+    }
+  }
+}
+
 public class P5 {
   public static void main(String[] args) {
     System.out.println(new Solution().longestPalindrome("cbbd"));
