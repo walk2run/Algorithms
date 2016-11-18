@@ -18,6 +18,6 @@ public class barn1 {
     m = scan.nextInt();
     s = scan.nextInt();
     c = scan.nextInt();
-    
+
   }
 }
