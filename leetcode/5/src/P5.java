@@ -1,9 +1,7 @@
-import java.util.Arrays;
-import java.util.Collections;
-
 /**
  * Created by yfy on 16-11-16.
  * Longest Palindromic Substring
+ * interesting
  */
 
 class Solution {
@@ -86,7 +84,7 @@ class Solution2 {
         d[last]++;
       else {
         for (j = last + 1; j < i; j++) {
-          d[j] = d[2 * last + 1 - j];
+          d[j] = j == i - 1 ?  0 : d[2 * last - j];
           if (d[j] >= i - j - 1) {
             d[j] = i - j - 1;
             if (s.charAt(i) == s.charAt(j - d[j])) {
