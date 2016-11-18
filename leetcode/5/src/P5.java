@@ -49,11 +49,10 @@ class Solution {
 
 class Solution2 {
   public String longestPalindrome(String s) {
-    int i, j, n, last;
+    int i, j, n, last, max1, pos1, max2, pos2;
     n = s.length();
 
     int[] d = new int[n];  // odd
-    Arrays.fill(d, 1);
     last = 0;
     for (i = 1; i < n; i++) {
       if (2 * last - i >= 0 && s.charAt(i) == s.charAt(2 * last - i))
@@ -61,8 +60,35 @@ class Solution2 {
       else {
         for (j = last + 1; j < i; j++) {
           d[j] = d[2 * last - j];
-          if (d[j] > i - j) {
-            d[j] = i - j;
+          if (d[j] >= i - j - 1) {
+            d[j] = i - j - 1;
+            if (s.charAt(i) == s.charAt(j - d[j] - 1)) {
+              d[last = j]++;
+              break;
+            }
+          }
+        }
+        if (j == i) last = i;
+      }
+    }
+    max1 = pos1 = 0;
+    for (i = 0; i < n; i++) {
+      if (d[i] > max1) {
+        max1 = d[i];
+        pos1 = i;
+      }
+    }
+
+    d = new int[n];
+    last = 0;
+    for (i = 1; i < n; i++) {
+      if (2 * last + 1 - i >= 0 && s.charAt(i) == s.charAt(2 * last + 1 - i))
+        d[last]++;
+      else {
+        for (j = last + 1; j < i; j++) {
+          d[j] = d[2 * last + 1 - j];
+          if (d[j] >= i - j - 1) {
+            d[j] = i - j - 1;
             if (s.charAt(i) == s.charAt(j - d[j])) {
               d[last = j]++;
               break;
@@ -72,17 +98,21 @@ class Solution2 {
         if (j == i) last = i;
       }
     }
-
-    d = new int[n];
-    last = 0;
-    for (i = 1; i < n; i++) {
-      
+    max2 = pos2 = 0;
+    for (i = 0; i < n; i++) {
+      if (d[i] > max2) {
+        max2 = d[i];
+        pos2 = i;
+      }
     }
+    return max1 * 2 + 1 > max2 * 2 ?
+        s.substring(pos1 - max1, pos1 + max1 + 1) :
+        s.substring(pos2 - max2 + 1, pos2 + max2 + 1);
   }
 }
 
 public class P5 {
   public static void main(String[] args) {
-    System.out.println(new Solution().longestPalindrome("cbbd"));
+    System.out.println(new Solution2().longestPalindrome("321012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210012321001232100123210123210012321001232100123210123"));
   }
 }
