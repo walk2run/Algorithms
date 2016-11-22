@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 public class barn1 {
   public static void main(String[] args) throws Exception {
-    int m, s, c, i, no, lastNo;
+    int m, s, c, i, no, lastNo, sum;
     Scanner scan = new Scanner(new BufferedInputStream(new FileInputStream("barn1.in")));
     m = scan.nextInt();
     s = scan.nextInt();
@@ -29,7 +29,10 @@ public class barn1 {
       list.add(no - lastNo - 1);
       lastNo = no;
     }
-    list.sort(null);
-    for (i = 0; i < )
+    list.sort((o1, o2) -> o2 - o1);
+    sum = 0;
+    for (i = 0; i < m - 1; i++) {
+      sum += list.get(i);
+    }
   }
 }
