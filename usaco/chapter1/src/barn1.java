@@ -35,7 +35,7 @@ public class barn1 {
     stalls.sort(null);
     List<Integer> intervals = new ArrayList<>();
     for (i = 1; i < c; i++)
-      intervals.add(stalls.get(i) - stalls.get(i - 1));
+      intervals.add(stalls.get(i) - stalls.get(i - 1) - 1);
     intervals.sort((o1, o2) -> o2 - o1);
     sum = 0;
     for (i = 0; i < m - 1; i++)
