@@ -12,14 +12,6 @@ import java.util.*;
  * Created by yfy on 2016/10/31.
  */
 
-class Pair {
-  int a, b;
-  public Pair(int a, int b) {
-    this.a = a;
-    this.b = b;
-  }
-}
-
 public class milk2 {
   public static void main(String[] args) throws Exception {
     int n, i, max, max2, begin, end;
@@ -47,5 +39,13 @@ public class milk2 {
     PrintWriter writer = new PrintWriter("milk2.out");
     writer.println(max + " " + max2);
     writer.close();
+  }
+
+  private static class Pair {
+    int a, b;
+    Pair(int a, int b) {
+      this.a = a;
+      this.b = b;
+    }
   }
 }
