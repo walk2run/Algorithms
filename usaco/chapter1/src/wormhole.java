@@ -15,6 +15,6 @@ import java.util.Scanner;
 public class wormhole {
   public static void main(String[] args) throws Exception {
     Scanner scan = new Scanner(new BufferedInputStream(new FileInputStream("wormhole.in")));
-    
+
   }
 }
