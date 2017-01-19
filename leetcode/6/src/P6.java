@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  * Created by yfy on 16-11-16.
  * ZigZag Conversion
