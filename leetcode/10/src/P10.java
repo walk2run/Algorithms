@@ -32,7 +32,14 @@ class Solution {
 
 class Solution2 {
   public boolean isMatch(String s, String p) {
-
+    int i, j;
+    i = j = 0;
+    while (i < s.length()) {
+      if (j < p.length() && (p.charAt(j) == '.' || p.charAt(j) == s.charAt(i))) {
+        i++;
+        j++;
+      }
+    }
   }
 }
 
