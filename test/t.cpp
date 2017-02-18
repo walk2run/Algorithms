@@ -4,8 +4,13 @@
 
 class Foo {
 public:
-  int a;
-  bool b;  
+  static int a;
+  bool b = 0;
+  const int c = 1;
+  Foo(int c): c(c), a(5) {}
+  static void print() {
+    std::cout << "print\n";
+  }
 };
 
 bool operator==(const Foo& f1, const Foo& f2) {
@@ -14,7 +19,7 @@ bool operator==(const Foo& f1, const Foo& f2) {
 }
 
 std::ostream& operator<<(std::ostream& os, const Foo& foo) {
-  return os << foo.a << foo.b;
+  return os << foo.a << foo.b << foo.c;
 }
 
 struct hash {
@@ -25,7 +30,7 @@ struct hash {
 };
 
 int main() {
-  Foo f1{1, true}, f2{5, false};
+  /*Foo f1{1, true}, f2{5, false};
   std::cout << f1 << f2 << std::endl;
   std::cout << (f1 == f2) << std::endl;
   std::cout << (f1 == Foo{1, true}) << std::endl;
@@ -39,5 +44,12 @@ int main() {
   std::vector<int> vec={5, 9};
   std::cout << vec[3] << std::endl;
   std::cout << std::vector<int>{1, 2, 3, 4, 5}[3] << std::endl;
-  std::cout << (new int[5]{1, 2, 3})[1] << std::endl;
+  std::cout << (new int[5]{1, 2, 3})[1] << std::endl;*/
+  
+  Foo foo(3);
+  std::cout << foo << std::endl;
+  std::cout << Foo::a << std::endl;
+  foo.print();
+  Foo::print();
+  
 }
