@@ -7,11 +7,13 @@ public:
   static int a;
   bool b = 0;
   const int c = 1;
-  Foo(int c): c(c), a(5) {}
+  Foo(int c): c(c) {}
   static void print() {
     std::cout << "print\n";
   }
 };
+
+int Foo::a = 5;
 
 bool operator==(const Foo& f1, const Foo& f2) {
   std::cout << "==\n";
