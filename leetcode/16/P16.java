@@ -1,7 +1,7 @@
 public class Solution {
-  public List<List<Integer>> threeSum(int[] nums) {
+  public int threeSumClosest(int[] nums, int target) {
     Arrays.sort(nums);
-    List<List<Integer>> lists = new ArrayList<>();
+    int min = Integer.MAX_VALUE, ans = 0;
     for (int i = 0; i < nums.length - 2; i++) {
       if (i > 0 && nums[i] == nums[i - 1])
         continue;
@@ -12,16 +12,18 @@ public class Solution {
         int b = nums[j];
         int c = nums[k];
         int s = a + b + c;
-        if (s > 0)
-          k--;
-        else if (s < 0)
-          j++;
-        else {
-          lists.add(new ArrayList<>(Arrays.asList(a, b, c)));
-          while (j < nums.length && nums[j] == b) j++;
+        if (Math.abs(s - target) < min) {
+          min = Math.abs(s - target);
+          ans = s;
         }
+        if (s == target)
+          return s;
+        else if (s > target)
+          k--;
+        else if (s < target)
+          j++;
       }
     }
-    return lists;
+    return ans;
   }
 }
