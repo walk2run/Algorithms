@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 struct S {
-  int &b;
+  int b;
+  //char c;
 };
 
 int main() {
@@ -10,7 +11,5 @@ int main() {
   int b[5];
   int c = 1;
   int &d = c;
-  printf("%d\n", sizeof(a));
-  printf("%d\n", sizeof(&d));
   return 0;
 }
