@@ -22,10 +22,9 @@ public class LRUCache {
     if (node == null) {
       if (map.size() == capacity) {
         map.remove(tail.key);
-        if (tail.prev != null) {
+        if (tail.prev != null)
           tail.prev.next = null;
-          tail = tail.prev;
-        }
+        tail = tail.prev;
       }
       node = new Node(key, value);
       map.put(key, node);
