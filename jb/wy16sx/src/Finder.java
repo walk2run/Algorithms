@@ -4,6 +4,7 @@ public class Finder {
   }
   
   private int f(int[] a, int l, int r, int k) {
+    if (l == r && k == 1) return a[l];
     int v = a[(l + r) / 2];
     int i = l;
     int j = r;
@@ -18,9 +19,9 @@ public class Finder {
         j--;
       }
     }
-    if (j - l + 1 == k) return a[j];
-    if (j - l + 1 > k) return f(a, l, j, k);
-    return f(a, j + 1, r, k - (j - l + 1));
+    if (l <= j && k <= j - l + 1) return f(a, l, j, k);
+    if (i <= r && k > i - l) return f(a, i, r, k - (i - l));
+    return a[j + 1];
   }
 
   public static void main(String[] args) {
