@@ -1,4 +1,7 @@
-public class LRUCache {
+import java.util.Map;
+import java.util.HashMap;
+
+class LRUCache {
   private Map<Integer, Node> map;
   private Node head, tail;
   private int capacity;
@@ -14,6 +17,7 @@ public class LRUCache {
       return -1;
     delNode(node);
     addHead(node);
+    //print();
     return node.value;
   }
   
@@ -33,6 +37,7 @@ public class LRUCache {
       delNode(node);
     }
     addHead(node);
+    //print();
   }
   
   private void delNode(Node node) {
@@ -53,8 +58,23 @@ public class LRUCache {
       node.next = null;
     } else {
       node.next = head;
+      head.prev = node;
       head = node;
     }
+  }
+
+  private void print() {
+    System.out.println("print");
+    Node n = head;
+    while (n != null) {
+      System.out.print(n.key + " " + n.value + "  ");
+      n = n.next;
+    }
+    System.out.println();
+    for (Map.Entry<Integer, Node> e : map.entrySet()) {
+      System.out.print(e.getKey() + " " + e.getValue().value + "  ");
+    }
+    System.out.println();
   }
   
   private static class Node {
@@ -73,3 +93,14 @@ public class LRUCache {
  * int param_1 = obj.get(key);
  * obj.put(key,value);
  */
+
+public class P146 {
+  public static void main(String[] args) {
+    LRUCache cache = new LRUCache(2);
+    cache.put(1, 1);
+    cache.put(2, 2);
+    System.out.println(cache.get(1));
+    cache.put(3, 3);
+    System.out.println(cache.get(2));
+  }
+}
