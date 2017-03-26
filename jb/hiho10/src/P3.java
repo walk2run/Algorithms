@@ -71,3 +71,39 @@ public class P3 {
     return a[j + 1];
   }
 }
+
+class P3_2 {
+  private static Scanner scan;
+
+  public static void main(String[] args) {
+    scan = new Scanner(System.in);
+    int t = scan.nextInt();
+    for (int i = 0; i < t; i++)
+      solve();
+  }
+
+  private static void solve() {
+    int n, k;
+    n = scan.nextInt();
+    k = scan.nextInt();
+    int[] a = new int[n];
+    Map<Integer, Integer> map = new HashMap<>();
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+      int x = scan.nextInt();
+      Integer value = map.get(x);
+      if (value == null) {
+        a[i] = count;
+        map.put(x, count);
+        count++;
+      } else {
+        a[i] = value;
+      }
+    }
+    //for (int x : a) System.out.println(x);
+    long l = 0, r = n * (long)(n - 1) / 2;
+    while (l < r) {
+      long mid = (l + r) / 2;
+    }
+  }
+}
