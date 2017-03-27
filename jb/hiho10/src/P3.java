@@ -104,6 +104,24 @@ class P3_2 {
     long l = 0, r = n * (long)(n - 1) / 2;
     while (l < r) {
       long mid = (l + r) / 2;
+      if (check(mid, n, a, k))
+        r = mid;
+      else
+        l = mid + 1;
     }
+    System.out.println(l);
+  }
+
+  private static boolean check(long v, int n, int[] a, int k) {
+    int[] num = new int[n];
+    int count = 0, value = 0, j = 0;
+    for (int i = 0; i < n; i++) {
+      value += num[a[i]]++;
+      while (value > v)
+        value -= --num[a[j++]];
+      count += i - j + 1;
+      if (count >= k) return true;
+    }
+    return false;
   }
 }
