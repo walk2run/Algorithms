@@ -21,22 +21,21 @@ public class P1 {
     }
   }
 
-//  private static void solve(int n, int m) {
-//    long sum = 0;
-//    for (int i = 1; i < Math.min(n, m); i++)
-//      sum = (sum + (n - i) * (m - i) % 1000000007 * i % 1000000007) % 1000000007;
-////    ps.println(sum);
-//
-////    long sum = 0;
-////    for (int i = 1; i < Math.min(n, m); i++) {
-////      long pro = BigInteger.valueOf(n - i).multiply(BigInteger.valueOf(m - i)).multiply(BigInteger.valueOf(i)).mod(BigInteger.valueOf(1000000007)).longValue();
-////      sum = (sum + pro) % 1000000007;
-////    }
+  private static long solve(int n, int m) {
+    long sum = 0;
+    for (int i = 1; i < Math.min(n, m); i++)
+      sum = (sum + (n - i) * (m - i) % 1000000007 * i % 1000000007) % 1000000007;
 //    ps.println(sum);
-//    System.out.println(sum);
-//  }
 
-  private static long solve(long n, long m) {
+//    long sum = 0;
+//    for (int i = 1; i < Math.min(n, m); i++) {
+//      long pro = BigInteger.valueOf(n - i).multiply(BigInteger.valueOf(m - i)).multiply(BigInteger.valueOf(i)).mod(BigInteger.valueOf(1000000007)).longValue();
+//      sum = (sum + pro) % 1000000007;
+//    }
+    return sum;
+  }
+
+  private static long solve2(long n, long m) {
     n = Math.min(n, m);
     m = Math.max(n, m);
     long a = m - 1, b = 2 * a + 2 * (m - 2), c = b;
