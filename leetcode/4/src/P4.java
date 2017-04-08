@@ -5,15 +5,14 @@
 
 class Solution {
   public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-    int len1, len2, len;
-    len1 = nums1.length;
-    len2 = nums2.length;
-    len = len1 + len2;
-    if (len % 2 == 0)
-      return (find(nums1, 0, len1, nums2, 0, len2, len / 2) +
-          find(nums1, 0, len1, nums2, 0, len2, len / 2 + 1)) / 2;
+    int n = nums1.length;
+    int m = nums2.length;
+    int l = n + m;
+    if (l % 2 == 0)
+      return (find(nums1, 0, n, nums2, 0, m, l / 2) +
+          find(nums1, 0, n, nums2, 0, m, l / 2 + 1)) / 2;
     else
-      return find(nums1, 0, len1, nums2, 0, len2, len / 2 + 1);
+      return find(nums1, 0, n, nums2, 0, m, l / 2 + 1);
   }
 
   // m, n are length
