@@ -3,9 +3,11 @@ public class Solution {
   private int target;
   private List<Integer> list;
   private List<List<Integer>> lists;
+  private boolean use;
   
-  public List<List<Integer>> combinationSum(int[] candidates, int target) {
+  public List<List<Integer>> combinationSum2(int[] candidates, int target) {
     a = candidates;
+    Arrays.sort(a);
     this.target = target;
     lists = new ArrayList<>();
     list = new ArrayList<>();
@@ -20,30 +22,13 @@ public class Solution {
       return;
     }
     if (i == a.length) return;
-    search(i + 1, sum);
-    int count = 0;
-    while (true) {
-      count++;
+    if (i == 0 || a[i] == a[i - 1] && use || a[i] != a[i - 1]) {
       list.add(a[i]);
-      sum += a[i];
-      if (sum <= target)
-        search(i + 1, sum);
-      else
-        break;
-    }
-    for (int j = 0; j < count; j++)
+      use = true;
+      search(i + 1, sum + a[i]);
       list.remove(list.size() - 1);
-  }
-}
-
-// dp
-public class Solution {
-  public List<List<Integer>> combinationSum(int[] candidates, int target) {
-    int[] a = candidates;
-    for (int i = 0; i < a.length; i++) {
-      for (int v = 0; v <= target; v++) {
-        
-      }
     }
+    use = false;
+    search(i + 1, sum);
   }
 }
