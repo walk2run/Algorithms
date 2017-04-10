@@ -21,10 +21,21 @@ public class P2 {
         sum = a[i][j];
       }
     }
-    for (int i1 = 0; i1 < n; i1++)
+    int maxArea = 0;
+    for (int i1 = 0; i1 < n; i1++) {
       for (int i2 = 0; i2 < n; i2++) {
-        int j1 = 0, j2 = 0;
-
+        int j1 = 0, sum = 0, max = 0;
+        for (int j2 = 0; j2 < m; j2++) {
+          sum += i1 == 0 ? a[i2][j2] : a[i2][j2] - a[i1 - 1][j2];
+          while (sum > k) {
+            sum -= i1 == 0 ? a[i2][j1] : a[i2][j1] - a[i1 - 1][j1];
+            j1++;
+          }
+          max = Math.max(max, j2 - j1 + 1);
+        }
+        maxArea = Math.max(maxArea, max * (i2 - i1 + 1));
       }
+    }
+    System.out.println(maxArea);
   }
 }
