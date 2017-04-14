@@ -14,7 +14,6 @@ def num_decodings(s)
 		if num >= 10 && num <= 26
 			d[i] += d[i - 2]
 		end
-
 	end
 	return d[n - 1]
 end
