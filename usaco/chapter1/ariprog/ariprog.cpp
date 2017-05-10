@@ -4,12 +4,6 @@ PROG: ariprog
 LANG: C++
  */
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   ariprog.cpp
  * Author: yfy
@@ -43,10 +37,9 @@ bool cmp(const Pair &p1, const Pair &p2) {
 }
 
 int main(int argc, char** argv) {
-  FILE *fin, *fout;
-  fin = fopen("ariprog.in", "r");
-  fout = fopen("ariprog.out", "w");
+  FILE *fin = fopen("ariprog.in", "r");
   fscanf(fin, "%d %d", &n, &m);
+  fclose(fin);
   
   bisquare();
   int maxBis = m * m * 2;
@@ -63,10 +56,10 @@ int main(int argc, char** argv) {
   }
   
   std::sort(list.begin(), list.end(), cmp);
+  
+  FILE *fout = fopen("ariprog.out", "w");
   for (Pair p : list)
     fprintf(fout, "%d %d\n", p.a, p.b);
-  
-  fclose(fin);
   fclose(fout);
   return 0;
 }
