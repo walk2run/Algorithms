@@ -1,7 +1,7 @@
 /*
 ID: iamyfy1
 PROG: ariprog
-LANG: C++
+LANG: C++11
  */
 
 /* 
@@ -32,25 +32,29 @@ struct Pair {
   Pair(int a, int b) : a(a), b(b) {}
 };
 
-bool cmp(const Pair &p1, const Pair &p2) {
-  return p1.b < p2.b || (p1.b == p2.b && p1.a < p2.a);
+//bool cmp(const Pair &p1, const Pair &p2) {
+//  return p1.b < p2.b || (p1.b == p2.b && p1.a < p2.a);
+//}
+
+bool cmp(const Pair *p1, const Pair *p2) {
+  return p1->b < p2->b || (p1->b == p2->b && p1->a < p2->a);
 }
 
-int main(int argc, char** argv) {
+int main() {
   FILE *fin = fopen("ariprog.in", "r");
   fscanf(fin, "%d %d", &n, &m);
   fclose(fin);
   
   bisquare();
   int maxBis = m * m * 2;
-  std::vector<Pair> list;
+  std::vector<Pair*> list;
   for (int a = 0; a <= maxBis; a++) {
     for (int b = 1; ; b++) {
       if (a + (n - 1) * b <= maxBis) {
         int i = 0;
         for (i = 0; i < n; i++)
           if (!bis.test(a + i * b)) break;
-        if (i == n) list.push_back(Pair(a, b));
+        if (i == n) list.push_back(new Pair(a, b));
       } else break;
     }
   }
@@ -58,8 +62,12 @@ int main(int argc, char** argv) {
   std::sort(list.begin(), list.end(), cmp);
   
   FILE *fout = fopen("ariprog.out", "w");
-  for (Pair p : list)
-    fprintf(fout, "%d %d\n", p.a, p.b);
+  if (list.empty()) {
+    fprintf(fout, "NONE\n");
+  } else {
+    for (Pair *p : list)
+      fprintf(fout, "%d %d\n", p->a, p->b);
+  }
   fclose(fout);
   return 0;
 }
