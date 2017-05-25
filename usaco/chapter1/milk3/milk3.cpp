@@ -15,7 +15,6 @@ LANG: C++11
 #include <string.h>
 #include <vector>
 #include <algorithm>
-#include <iostream>
 using namespace std;
 
 int A, B, C;
