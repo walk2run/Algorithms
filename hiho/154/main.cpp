@@ -21,13 +21,13 @@ double dis(double x, double y) {
   return sqrt(x * x + y * y);
 }
 
-bool overlap(Circle a, Circle b) {
-  return dis(a.x - b.x, a.y - b.y) < a.r + b.r;
+bool overlap(const Circle &a, const Circle &b) {
+  return dis(a.x - b.x, a.y - b.y) <= a.r + b.r;
 }
 
+// whether can find a consecutive chain of circles to block the road
 bool dfs(int p) {
-  cout << p << endl;
-  Circle c = cs[p];
+  Circle &c = cs[p];
   if (c.visited) return false;
   c.visited = true;
   if (c.y + c.r >= h) return true;
@@ -41,8 +41,8 @@ string solve() {
   for (int i = 0; i < n; ++i)
     cin >> cs[i];
   for (int i = 0; i < n; ++i)
-    if (cs[i].y - cs[i].r <= 0 && dfs(i)) return "YES";
-  return "NO";
+    if (cs[i].y - cs[i].r <= 0 && dfs(i)) return "NO";
+  return "YES";
 }
 
 int main() {
