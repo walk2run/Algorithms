@@ -29,7 +29,25 @@ int main() {
   for (; i < n; i++)
     d[3][a[i]]++;
 
+
+  int sum = 0;
+  int t = min(d[1][2], d[2][1]);
+  sum += t;
+  d[1][2] -= t; d[2][1] -= t;
+  t = min(d[1][3], d[3][1]);
+  sum += t;
+  d[1][3] -= t; d[3][1] -= t;
+  t = min(d[2][3], d[3][2]);
+  sum += t;
+  d[2][3] -= t; d[3][2] -= t;
+  t = min(d[1][2], min(d[2][3], d[3][1]));
+  sum += t * 2;
+  d[1][2] -= t; d[2][3] -= t; d[3][1] -= t;
+  t = min(d[1][3], min(d[2][1], d[3][2]));
+  sum += t * 2;
+
   ofstream fout("sort3.out");
+  fout << sum << '\n';
   fout.close();
   return 0;
 }
