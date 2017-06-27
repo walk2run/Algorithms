@@ -12,7 +12,7 @@ int req[25], feed[15][25];
 
 int bitCount(unsigned int n)
 {
-	unsigned int c = 0 ;
+	unsigned int c = 0;
 	for (c = 0; n; c++)
 		n &= n - 1;
 	return c;
