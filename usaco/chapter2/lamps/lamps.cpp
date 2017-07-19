@@ -1,6 +1,13 @@
+/*
+ID: iamyfy1
+PROG: lamps
+LANG: C++11
+ */
 #include <fstream>
 #include <vector>
 #include <cstring>
+#include <algorithm>
+
 using namespace std;
 
 const int N = 100;
@@ -28,7 +35,7 @@ bool noDup() {
 }
 
 void btn1() {
-  for (bool b : ls) b = !b;
+  for (bool &b : ls) b = !b;
 }
 
 void btn2() {
@@ -47,6 +54,9 @@ void btn4() {
 }
 
 void dfs(int depth) {
+//  for (int i = 1; i <= n; i++)
+//    cout << ls[i];
+//  cout << '\n';
   if (depth == c + 1) {
     if (check() && noDup()) {
       bool *l = new bool[n + 1];
@@ -59,6 +69,14 @@ void dfs(int depth) {
   btn2(); dfs(depth + 1); btn2();
   btn3(); dfs(depth + 1); btn3();
   btn4(); dfs(depth + 1); btn4();
+}
+
+bool cmp(bool *a, bool *b) {
+  for (int i = 1; i <= n; i++) {
+    if (a[i] < b[i]) return true;
+    if (a[i] > b[i]) return false;
+  }
+  return false;
 }
 
 int main() {
@@ -80,9 +98,18 @@ int main() {
     if (c % 2 == 0) c = 4; else c = 3;
   }
 
+  memset(ls, 1, n + 1);
   dfs(1);
+  sort(list.begin(), list.end(), cmp);
 
   ofstream fout("lamps.out");
+  for (bool *ls : list) {
+    for (int i = 1; i <= n; i++)
+      fout << ls[i];
+    fout << '\n';
+  }
+  if (list.empty())
+    fout << "IMPOSSIBLE\n";
   fout.close();
   return 0;
 }
