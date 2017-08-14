@@ -39,5 +39,30 @@ public class Solution {
   }
 }
 
+public class Solution {
+  public List<List<String>> partition(String s) {
+    int n = s.length();
+    List<List<String>>[] d = new List[n + 1];
+    d[0] = new ArrayList<>();
+    d[0].add(new ArrayList<>());
+    boolean[][] pal = new boolean[n][n];
+    for (int i = 0; i < n; i++) {
+      d[i + 1] = new ArrayList<>();
+      for (int j = 0; j <= i; j++) {
+        if (s.charAt(j) == s.charAt(i) && (i - j <= 2 || pal[j + 1][i - 1])) {
+          pal[j][i] = true;
+          String str = s.substring(j, i + 1);
+          for (List<String> list : d[j]) {
+            List<String> newList = new ArrayList<>(list);
+            newList.add(str);
+            d[i + 1].add(newList);
+          }
+        }
+      }
+    }
+    return d[n];
+  }
+}
+
 public class P131 {
 }
