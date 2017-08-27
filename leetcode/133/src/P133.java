@@ -18,7 +18,7 @@ class UndirectedGraphNode {
   }
 }
 
-public class Solution {
+class Solution {
   public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
     if (node == null) return null;
     if (map.containsKey(node.label))
