@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class P1 {
   public static void main(String[] args) throws Exception {
-    Scanner scan = new Scanner(new File("A-large.in"));
+    Scanner scan = new Scanner(new File("A-large-practice.in"));
     int t = scan.nextInt();
     PrintWriter pw = new PrintWriter("A-large.out");
     for (int i = 1; i <= t; i++)
@@ -16,6 +16,37 @@ public class P1 {
   }
 
   static int solve(Scanner scan) {
+    String s = scan.next();
+    int n = s.length();
+    int[][][] d = new int[n][n][n];
+    d[0][0][0] = 1;
+    for (int i = 1; i < n; i++) {
+      int min = Integer.MAX_VALUE;
+      for (int l = 0; l <= i; l++) {
+        for (int r = l; r <= i; r++) {
+          if (l == r) {
+            d[i][l][r] = i + 1;
+            min = Math.min(d[i][l][r], min);
+          } else if (r < i) {
+            int len = r - l + 1;
+            d[i][l][r] = d[i - 1][l][r] + 1;
+            if (equal(s, l, i - len + 1, len))
+              d[i][l][r] = Math.min(d[i - len][l][r] + 1, d[i][l][r]);
+            min = Math.min(d[i][l][r], min);
+          }
+        }
+      }
+      for (int l = 0; l < i; l++)
+        d[i][l][i] = min + 1;
+    }
+    int min = Integer.MAX_VALUE;
+    for (int l = 0; l < n; l++)
+      for (int r = l; r < n; r++)
+        min = Math.min(d[n - 1][l][r], min);
+    return min;
+  }
+
+  static int solve0(Scanner scan) {
     String s = scan.next();
     int n = s.length();
     int[] d = new int[n];
@@ -41,6 +72,7 @@ public class P1 {
   }
 
   static boolean equal(String s, int a, int b, int len) {
+    if (a + len > b) return false;
     for (int i = 0; i < len; i++)
       if (s.charAt(a + i) != s.charAt(b + i))
         return false;
