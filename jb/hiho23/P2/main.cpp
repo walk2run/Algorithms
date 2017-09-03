@@ -21,7 +21,7 @@ vector<string>* split(const string &s, const string &r) {
 
 struct Node {
   string name;
-  vector<Node> vec;
+  vector<Node*> vec;
 };
 
 int main() {
@@ -37,12 +37,24 @@ int main() {
     vecs.push_back(vec);
     Node *cur = &root;
     for (auto s : *vec) {
-      for (Node node : cur->vec) {
-
+      Node *newNode = NULL;
+      for (Node *node : cur->vec) {
+        if (s == node->name) {
+          newNode = node;
+          break;
+        }
+      }
+      if (newNode == NULL) {
+        newNode = new Node;
+        newNode->name = s;
+        cur->vec.push_back(newNode);
       }
       cout << s << ' ';
     }
     cout << endl;
   }
+
+  // todo
+
   return 0;
 }
