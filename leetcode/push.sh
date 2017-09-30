@@ -3,6 +3,7 @@ git add */*.c
 git add */*.java
 git add */*.py
 git add */*.rb
+git add */*.js
 git add */src/*.java
 git add push.sh
 git commit -m qwordy
